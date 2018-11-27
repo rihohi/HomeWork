@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,21 @@ public class Fragment3 extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         OrderSelect adapter=new OrderSelect(orMenulist);
         recyclerView.setAdapter(adapter);
+
+        Button button=(Button)view.findViewById(R.id.buttonBalance);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"balanced",Toast.LENGTH_SHORT).show();
+            }
+        });
+        button=(Button)view.findViewById(R.id.dingdan);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"orderShow",Toast.LENGTH_SHORT).show();
+            }
+        });
         return view;
     }
 
@@ -38,4 +55,5 @@ public class Fragment3 extends Fragment {
             orMenulist.add(new OrderMenu(R.mipmap.ic_launcher,"代付款"));
         }
     }
+
 }

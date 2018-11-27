@@ -16,7 +16,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:id="@+id/touxiang"
-            android:background="@mipmap/ic_launcher_round"/>
+            android:background="@mipmap/head"/>
 
         <TextView
             android:id="@+id/textViewName"
@@ -161,10 +161,12 @@
             android:layout_height="56dp"
             android:layout_marginBottom="14dp"
             android:layout_marginTop="14dp"
-            android:background="@mipmap/ic_launcher_round"
+            android:background="@mipmap/pay"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/textBalance"
